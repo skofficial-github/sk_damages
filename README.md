@@ -1,6 +1,6 @@
 # sk_damages
 Made by SK Official
-# FiveM Damage Viewer with Webhook (QB/OX Core)
+# FiveM Damage Viewer with Webhook (QB/OX)
 
 A FiveM damage viewer tool that supports QBCore and ox_core, with damage logging to a Discord webhook.
 
