@@ -1,8 +1,8 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'YourName'
-description 'Damage Viewer with Webhook for QB and OX'
+author 'SK Official'
+description 'sk_damages Made by SK Official'
 version '1.0.0'
 
 shared_script '@qb-core/shared/weapons.lua'
