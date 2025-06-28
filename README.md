@@ -15,13 +15,12 @@ A FiveM damage viewer tool that supports QBCore and ox_core, with damage logging
 ## Installation
 
 1.  **Download**: Download the files from GitHub and extract them into your FiveM server's `resources` folder.
-2.  **Rename Folder**: Rename the folder to `damageviewer` (or any other name you prefer).
-3.  **Set up Webhook**:
+2.  **Set up Webhook**:
     * Open the `server.lua` file.
     * Locate the line `local webhookUrl = "https://discord.com/api/webhooks/XXXXXXXXXX/XXXXXXXXXX"`.
     * Replace `https://discord.com/api/webhooks/XXXXXXXXXX/XXXXXXXXXX` with your Discord webhook URL.
-4.  **Add to `server.cfg`**: Add `ensure damageviewer` (or your chosen folder name) to your `server.cfg` file.
-5.  **Restart Server**: Restart your FiveM server.
+3.  **Add to `server.cfg`**: Add `ensure sk_damages` (or your chosen folder name) to your `server.cfg` file.
+4.  **Restart Server**: Restart your FiveM server.
 
 ## Usage
 
