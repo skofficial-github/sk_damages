@@ -85,9 +85,12 @@ Citizen.CreateThread(function()
                     local ped = GetPlayerPed(targetPlayer)
                     if DoesEntityExist(ped) then
                         local coords = GetPedBoneCoords(ped, 31086, 0.0, 0.0, 0.0)
-                        Draw3DText(coords.x, coords.y, coords.z, 
-                            "(( Has been injured /damages " .. data.id .. " to view the injured. ))", 
-                            255, 0, 0)
+                        local myCoords = GetEntityCoords(PlayerPedId())
+                        if #(coords - myCoords) < 10.0 then
+                            Draw3DText(coords.x, coords.y, coords.z, 
+                                "(( Has been injured /damages " .. data.id .. " to view the injured. ))", 
+                                255, 0, 0)
+                        end
                     end
                 end
             else
@@ -96,6 +99,7 @@ Citizen.CreateThread(function()
         end
     end
 end)
+
 
 function Draw3DText(x, y, z, text, r, g, b)
     local onScreen, _x, _y = World3dToScreen2d(x, y, z)

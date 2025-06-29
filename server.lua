@@ -76,3 +76,16 @@ RegisterCommand('damages', function(source, args)
         TriggerClientEvent('chat:addMessage', source, { args = {"", text} })
     end
 end, false)
+
+AddEventHandler('hospital:server:RevivePlayer', function(targetId)
+    playerDamageData[targetId] = {}
+end)
+
+AddEventHandler('QBCore:Server:PlayerRevive', function(playerId)
+    playerDamageData[playerId] = {}
+end)
+
+AddEventHandler('playerDropped', function()
+    local id = source
+    playerDamageData[id] = nil
+end)
